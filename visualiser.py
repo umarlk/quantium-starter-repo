@@ -19,7 +19,7 @@ dash_app = Dash(__name__)
 
 def generate_figure(chart_data):
     line_chart = line(chart_data, x="date", y="sales", title="Sales of Pink Morsel")
-    line_chart.update_layour(plat_bgcolor=COLORS["secondary"], paper_bgcolor=COLORS["primary"], font_color=COLORS["font"])
+    line_chart.update_layout(plot_bgcolor=COLORS["secondary"], paper_bgcolor=COLORS["primary"], font_color=COLORS["font"])
     return line_chart
 
 visualisation = dcc.Graph(id="visualisation", figure=generate_figure(data))
